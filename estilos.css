@@ -7,7 +7,7 @@ body {
 .title {
   width: 80%;
   height: 20%;
-  background-color: #00adb5;
+  background-color: rgb(36, 207, 207);
   color: black;
   text-align: center;
   margin: auto;
@@ -39,29 +39,38 @@ h1 {
 }
 .titulos {
   display: flex;
-  height: 10rem;
   justify-content: space-around;
   font-size: 1.2rem;
-  width: 100%;
+  margin-bottom: 15%;
+  height: 20%;
+  background-color: brown;
+  align-items: center;
+
 }
 .parrafos {
-  width: 10rem;
-  height: 10rem;
+  width: 20%;
+  height: 50%;
+  /* justify-content: center; */
+  align-items: center;
+  
 }
-.clima-valores {
+.container-valores {
   display: flex;
   justify-content: space-around;
+  background-color: rgb(36, 207, 207, 0.7) ;
+  
 }
 .valores {
-  width: 10rem;
-  height: 10rem;
+  width: 20%;
+  height: 50%;
+  border-right: black solid 1.5px ;
 }
-p {
+/* p {
   margin-top: 5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 4rem; 
   padding: 18px;
-  color: #fff;
-}
+   color: #fff;
+} */
 
 footer {
   width: 80%;
@@ -76,15 +85,55 @@ footer {
   font-size: 17px;
 }
 
-@media (min-width: 320) and (max-width: 479) {
+
+@media  (max-width: 768px) {
   #contenedor {
-      display: flex;
-    flex-direction: column;
+    display: flex;
+    
   }
-}
-@media (min-width: 479) and (max-width: 768px) {
-    #contenedor {
-      display: flex;
+  .titulos {
+    display: flex;
     flex-direction: column;
+    height: 100%;
+    width: 50%;
+    background-color: brown;
+    /* text-align: center; */
+    
+  } 
+  .container-valores {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 207, 207, 0.9);
+    width: 50%;
+    height: 100%;
+    
   }
+  .valores {
+    width: 90%;
+    height: 80%;
+    margin-top: 30px;
+    border-bottom: black solid 1.5px ;
+    border-right: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .parrafos {
+    width: 90%;
+    height: 80%;
+    /* font-size: 90%; */
+    /* margin: auto; */
+    margin-top: 30px;
+    font-size: 90%;
+    border-bottom: black solid 1.5px ;
+    
+  }
+ 
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    
+  }
+  
 }
