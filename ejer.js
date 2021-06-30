@@ -2,17 +2,22 @@ let div = document.querySelector("#temperatura");
 function peticionClima(json) {
   let ciudad = document.querySelector("#user-city").value;
   document.querySelector("#city-display").textContent = ciudad;
+
   const temperatura = (div.textContent = json.main.temp);
   document.querySelector("#temperatura").innerHTML = `${temperatura} °C`;
+
   const tempmin = (document.querySelector("#temperaturamaxima").textContent =
     json.main.temp_max);
   document.querySelector("#temperaturamaxima").innerHTML = `${tempmin} °C`;
+
   const tempmax = (document.querySelector("#temperaturaminima").textContent =
     json.main.temp_min);
   document.querySelector("#temperaturaminima").innerHTML = `${tempmax} °C`;
+
   const humedad = (document.querySelector("#humedad").textContent =
     json.main.humidity);
   document.querySelector("#humedad").innerHTML = `${humedad}%`;
+  
   const visibilidad = (document.querySelector("#visibilidad").textContent =
     json.visibility);
   document.querySelector("#visibilidad").innerHTML = `${visibilidad} mts`;
