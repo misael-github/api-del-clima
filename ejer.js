@@ -1,11 +1,13 @@
 
-    // CLASE 17 EJERCICIO 2
     let div = document.querySelector("#temperatura")
     function peticionClima(json){
         console.log(json)
-        div.textContent = json.main.temp
-        document.querySelector("#temperaturamaxima").textContent = json.main.temp_max
-        document.querySelector("#temperaturaminima").textContent = json.main.temp_min
+       const temperatura = div.textContent = json.main.temp
+       document.querySelector("#temperatura").innerHTML = `${temperatura} °C`
+       const tempmin =  document.querySelector("#temperaturamaxima").textContent = json.main.temp_max
+       document.querySelector("#temperaturamaxima").innerHTML = `${tempmin} °C`
+       const tempmax =  document.querySelector("#temperaturaminima").textContent = json.main.temp_min
+       document.querySelector("#temperaturaminima").innerHTML = `${tempmax} °C`
         const humedad = document.querySelector("#humedad").textContent = json.main.humidity
         document.querySelector("#humedad").innerHTML = `${humedad}%`
         const visibilidad = document.querySelector("#visibilidad").textContent = json.visibility
