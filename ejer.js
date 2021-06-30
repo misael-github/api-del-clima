@@ -2,7 +2,6 @@ let div = document.querySelector("#temperatura");
 function peticionClima(json) {
   let ciudad = document.querySelector("#user-city").value;
   document.querySelector("#city-display").textContent = ciudad;
-
   const temperatura = (div.textContent = json.main.temp);
   document.querySelector("#temperatura").innerHTML = `${temperatura} °C`;
   const tempmin = (document.querySelector("#temperaturamaxima").textContent =
@@ -20,8 +19,8 @@ function peticionClima(json) {
 }
 const btnBuscar = document.querySelector("#buscar");
 btnBuscar.addEventListener("click", peticionClima);
-
 // div.addEventListener("mouseenter", peticionClima )
+
 //ciudad      &units=metric para cambio a grados y id de la api
 fetch(
   `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&units=metric&appid=6245e636fa5b56f199a78e635b7010d0`
